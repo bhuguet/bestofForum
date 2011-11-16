@@ -1,0 +1,102 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<!-- PROJECT DESCRIPTION SECTION -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.agilegrenoble.2011</groupId>
+  <artifactId>openCMS</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>bestofForum</name>
+  <description>web application bestofForum for agileGrenoble 2011</description>
+
+        <properties>
+                <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        </properties>
+
+
+	<!-- BUILD PLUGIN SECTION -->
+  <build>
+    <sourceDirectory>apps</sourceDirectory>
+    <testSourceDirectory>test/unit</testSourceDirectory>
+
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2</version>
+        <executions>
+          <execution>
+            <id>phpunit</id>
+            <phase>test</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <executable>phpunit</executable>
+              <arguments>
+                <argument>--configuration=test/configuration.xml</argument>
+                <argument>--bootstrap=test/bootstrap/unit.php</argument>
+                <argument>--log-junit=target/TEST-phpunit.xml</argument>
+                <argument>test/unit/</argument>
+              </arguments>
+            </configuration>
+          </execution>
+          <execution>
+            <id>behat</id>
+            <phase>test</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <executable>behat</executable>
+              <arguments>
+                <argument>--colors</argument>
+                <argument>test/bdd/</argument>
+              </arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>central</id>
+            <name>dev-repo</name>
+            <url>http://ci.bestofmedia.com:8180/artifactory/dev-repo</url>
+        </repository>
+        <repository>
+            <snapshots />
+            <id>snapshots</id>
+            <name>dev-repo</name>
+            <url>http://ci.bestofmedia.com:8180/artifactory/dev-repo</url>
+        </repository>
+    </repositories>
+
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>bom-ci-hudson.bestofmedia.com</id>
+            <name>bom-ci-hudson.bestofmedia.com-releases</name>
+            <url>http://ci.bestofmedia.com:8180/artifactory/plugins-releases-local</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>org.codehaus.mojo</id>
+            <name>Repository for org.codehaus.mojo</name>
+            <url>http://repository.codehaus.org/org/codehaus/mojo/</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>maven2-repository.dev.java.net</id>
+            <name>Java.net Repository for Maven</name>
+            <url>http://download.java.net/maven/2/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>
