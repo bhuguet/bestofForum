@@ -1,5 +1,6 @@
 GIT commands
 git fetch origin master
+git fetch --tags
 git pull --rebase origin master
 git push -u origin master
 git push --tags
