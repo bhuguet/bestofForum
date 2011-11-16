@@ -5,7 +5,7 @@
 	<!-- PROJECT DESCRIPTION SECTION -->
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.agilegrenoble.2011</groupId>
-  <artifactId>openCMS</artifactId>
+  <artifactId>bestofForum</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>bestofForum</name>
   <description>web application bestofForum for agileGrenoble 2011</description>
@@ -63,7 +63,7 @@
 
   </build>
 
-    <repositories>
+<!--    <repositories>
         <repository>
             <snapshots>
                 <enabled>false</enabled>
@@ -78,15 +78,15 @@
             <name>dev-repo</name>
             <url>http://ci.bestofmedia.com:8180/artifactory/dev-repo</url>
         </repository>
-    </repositories>
+    </repositories>-->
 
 
     <pluginRepositories>
-        <pluginRepository>
+<!--        <pluginRepository>
             <id>bom-ci-hudson.bestofmedia.com</id>
             <name>bom-ci-hudson.bestofmedia.com-releases</name>
             <url>http://ci.bestofmedia.com:8180/artifactory/plugins-releases-local</url>
-        </pluginRepository>
+        </pluginRepository>-->
         <pluginRepository>
             <id>org.codehaus.mojo</id>
             <name>Repository for org.codehaus.mojo</name>
