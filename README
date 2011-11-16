@@ -2,6 +2,7 @@ GIT commands
 git fetch origin master
 git pull --rebase origin master
 git push -u origin master
+git push --tags
 
 OTHER commands
 phpunit --configuration=test/configuration.xml --bootstrap=test/bootstrap/unit.php test/
