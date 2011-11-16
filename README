@@ -1,7 +1,6 @@
-story 2: how to run unit test
+GIT commands
+git fetch origin master
+git pull --rebase origin master
+
+OTHER commands
 phpunit --configuration=test/configuration.xml --bootstrap=test/bootstrap/unit.php test/
-
-story 3: how to run (failing) functional test
-cd test/bdd/
-behat homepage.feature
-
