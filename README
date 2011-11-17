@@ -5,5 +5,9 @@ git pull --rebase origin master
 git push -u origin master
 git push --tags
 
-OTHER commands
+story 2: how to run unit test
 phpunit --configuration=test/configuration.xml --bootstrap=test/bootstrap/unit.php test/
+
+story 3: how to run (failing) functional test
+cd test/bdd/
+behat homepage.feature
