@@ -8,6 +8,6 @@ $steps->Given('/^I browse the "([^"]*)" page$/', function($world, $pageUrl) {
 $steps->Then('/^I can find "([^"]*)"$/', function($world, $StringToFind) {
     $pageContent = $world->browser->getResponse()->getContent();
     
-//    assertThat($pageContent, containsString($StringToFind));
+    assertThat($pageContent, containsString($StringToFind));
     
 });
