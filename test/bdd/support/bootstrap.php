@@ -23,7 +23,7 @@ if (!sfContext::hasInstance($contextName)) {
 
     $configuration->loadHelpers(array('Url', 'Partial'));
 
-    require_once 'PHPUnit/Framework.php';
-    require_once 'Hamcrest/hamcrest.php';
-    
+    // include Hamcrest to ease test creation
+    set_include_path(get_include_path() . PATH_SEPARATOR . sfConfig::get("sf_lib_dir") . '/vendor');
+    require_once sfConfig::get("sf_lib_dir") . '/vendor/Hamcrest/hamcrest.php';
 }

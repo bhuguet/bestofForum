@@ -1,0 +1,3 @@
+[submodule "lib/vendor/Hamcrest"]
+	path = lib/vendor/Hamcrest
+	url = https://git.bestofmedia.com/hamcrest
