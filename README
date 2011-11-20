@@ -5,6 +5,11 @@ git pull --rebase origin master
 git push -u origin master
 git push --tags
 
+GIT REPOS
+git submodule update --init
+
+story 1: symfony skeleton
+
 story 2: how to run unit test
 phpunit --configuration=test/configuration.xml --bootstrap=test/bootstrap/unit.php test/
 
