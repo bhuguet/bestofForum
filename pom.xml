@@ -51,7 +51,7 @@
             <configuration>
               <executable>behat</executable>
               <arguments>
-                <argument>--colors</argument>
+                <argument>--no-colors</argument>
                 <argument>test/bdd/</argument>
               </arguments>
             </configuration>
